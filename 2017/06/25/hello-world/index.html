@@ -11,7 +11,7 @@
 <meta property="og:url" content="https://github.com/Heath2016/2017/06/25/hello-world/index.html">
 <meta property="og:site_name" content="Hexo first">
 <meta property="og:description" content="这是我的第一个博客，使用hexo搭建，下次可能会使用新的技术来搭建 使用方法：123450. hexo n &amp;quot;postName&amp;quot; #新建文章( hexo new page &amp;quot;pageName&amp;quot; #新建页面 )1. hexo clean #清除缓存，**强烈建议每次执行命令前先清理缓存，每次部署前先删除 .deploy 文件夹**2. hexo g #生成网页">
-<meta property="og:updated_time" content="2017-06-25T08:30:55.729Z">
+<meta property="og:updated_time" content="2017-06-25T08:46:29.988Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hello Hexo">
 <meta name="twitter:description" content="这是我的第一个博客，使用hexo搭建，下次可能会使用新的技术来搭建 使用方法：123450. hexo n &amp;quot;postName&amp;quot; #新建文章( hexo new page &amp;quot;pageName&amp;quot; #新建页面 )1. hexo clean #清除缓存，**强烈建议每次执行命令前先清理缓存，每次部署前先删除 .deploy 文件夹**2. hexo g #生成网页">
@@ -91,17 +91,18 @@
       
         <p>这是我的第一个博客，使用hexo搭建，下次可能会使用新的技术来搭建</p>
 <h2 id="使用方法："><a href="#使用方法：" class="headerlink" title="使用方法："></a>使用方法：</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">0. hexo n &quot;postName&quot; #新建文章( hexo new page &quot;pageName&quot; #新建页面 )</div><div class="line">1. hexo clean #清除缓存，**强烈建议每次执行命令前先清理缓存，每次部署前先删除 .deploy 文件夹**</div><div class="line">2. hexo g #生成网页，可以在 public 目录查看整个网站的文件</div><div class="line">3. hexo s #本地预览，&apos;Ctrl+C&apos;关闭</div><div class="line">4. hexo d #部署.deploy目录</div></pre></td></tr></table></figure>
-<h2 id="搭建hexo过程"><a href="#搭建hexo过程" class="headerlink" title="搭建hexo过程"></a>搭建hexo过程</h2><p>参考：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">1. http://www.jianshu.com/p/e99ed60390a8</div><div class="line">2. http://www.jianshu.com/p/701b1095da11</div></pre></td></tr></table></figure></p>
-<p>个人搭建的注意事项：</p>
-<ol>
-<li>yml 中，：后面有空格</li>
-<li>deploy时，url对应的仓库的名字和github上的名字一样，例如Heath2016，仓库名为Heath2016.github.io，不能是 Heath.github.io</li>
-</ol>
+<h2 id="搭建hexo过程"><a href="#搭建hexo过程" class="headerlink" title="搭建hexo过程"></a>搭建hexo过程</h2><p>###０ 前期准备 ###<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">1. 安装git,node,hexo</div><div class="line">2. 创建github帐号</div><div class="line">3. 创建仓库名，仓库名＝帐号名.github.io</div></pre></td></tr></table></figure></p>
+<p>###１ 配置hexo ###<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">1. // 建立一个博客文件夹，并初始化博客，&lt;folder&gt;为文件夹的名称，可以随便起名字</div><div class="line">$ hexo init &lt;folder&gt;</div><div class="line">2. // 进入博客文件夹，&lt;folder&gt;为文件夹的名称</div><div class="line">$ cd &lt;folder&gt;</div><div class="line">3. // node.js的命令，根据博客既定的dependencies配置安装所有的依赖包</div><div class="line">$ npm install</div></pre></td></tr></table></figure></p>
+<h3 id="2-修改-config-yml"><a href="#2-修改-config-yml" class="headerlink" title="2 修改_config.yml"></a>2 修改_config.yml</h3><h4 id="1-网站相关信息"><a href="#1-网站相关信息" class="headerlink" title="1 网站相关信息"></a>1 网站相关信息</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">title: You title</div><div class="line">subtitle: </div><div class="line">description: </div><div class="line">author: Heath</div><div class="line">language: zh-CN</div><div class="line">timezone: Asia/Binjing</div><div class="line">**注意**：每一项的填写，其:后面都要保留一个空格，下同。</div></pre></td></tr></table></figure>
+<p>####２ 配置统一资源定位符（个人域名）####<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">url: https://github.com/Heath2016</div></pre></td></tr></table></figure></p>
+<h4 id="3-部署配置"><a href="#3-部署配置" class="headerlink" title="3 部署配置"></a>3 部署配置</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">deploy: </div><div class="line">  type: git</div><div class="line">  repo: https://github.com/Heath2016/Heath2016.github.io.git</div><div class="line">  branch: master</div></pre></td></tr></table></figure>
+<p>####参考####：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">1. http://www.jianshu.com/p/e99ed60390a8</div><div class="line">2. http://www.jianshu.com/p/701b1095da11</div></pre></td></tr></table></figure></p>
+<p>###　个人搭建的注意事项：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">1. yml 中，：后面有空格</div><div class="line">2. deploy时，url对应的仓库的名字和github上的名字一样，例如Heath2016，仓库名为Heath2016.github.io，不能是 Heath.github.io</div></pre></td></tr></table></figure></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://github.com/Heath2016/2017/06/25/hello-world/" data-id="cj4cggut300008koxj81c85pa" class="article-share-link">Share</a>
+      <a data-url="https://github.com/Heath2016/2017/06/25/hello-world/" data-id="cj4ch0csd000020ox72gaaka2" class="article-share-link">Share</a>
       
       
     </footer>
